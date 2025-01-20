@@ -29,7 +29,7 @@ export default function Home() {
     fetchHamburgers();
   }, []);
 
-  // Adiciona um novo hambúrguer
+  
   const addHamburger = async () => {
     if (!name || price <= 0 || !description) {
       alert("Preencha todos os campos corretamente!");
@@ -46,10 +46,10 @@ export default function Home() {
 
       if (!res.ok) throw new Error("Erro ao adicionar hambúrguer.");
 
-      // Atualiza a lista sem recarregar a página
+    
       await fetchHamburgers();
 
-      // Limpa os campos do formulário
+   
       setName("");
       setPrice(0);
       setDescription("");
